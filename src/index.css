@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-track: var(--track);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink: var(--accent-ink);
+  --color-cyan: var(--cyan);
+  --color-link: var(--link);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+}
+
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+
+  /* 1. Dark Cosmic Space Theme (Active Before Login on Landing Page & Welcome Screen) */
+  :root,
+  [data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0C081E;
+    --surface: #17112E;
+    --surface-2: #241A45;
+    --border: #3A2A69;
+    --text: #F8FAFC;
+    --text-muted: #A3A3D0;
+    --track: #1C1438;
+    --accent: #38BDF8;
+    --accent-hover: #7DD3FC;
+    --accent-ink: #070B1E;
+    --cyan: #38BDF8;
+    --link: #38BDF8;
+    --success: #34D399;
+    --danger: #F87171;
+  }
+
+  /* 2. Light Blue Colour Theme (Active After Login and all Inside-App Views) */
+  [data-theme="light-blue"] {
+    color-scheme: light;
+    --bg: #F0F7FF;          /* Crisp airy ice/sky blue background */
+    --surface: #FFFFFF;     /* Crisp white cards & panels */
+    --surface-2: #E0F2FE;   /* Soft sky blue for secondary items & chips */
+    --border: #BAE6FD;      /* Soft 1px sky blue borders */
+    --text: #0F172A;        /* Deep slate navy text for maximum contrast & readability */
+    --text-muted: #475569;  /* Sharp slate secondary text */
+    --track: #E2E8F0;       /* Neutral light track */
+    --accent: #0284C7;      /* Vibrant Sky/Ocean Blue */
+    --accent-hover: #0369A1;/* Deep Sky Blue on hover */
+    --accent-ink: #FFFFFF;  /* Crisp white text on primary buttons */
+    --cyan: #0284C7;        /* Accessible cyan/sky blue */
+    --link: #0284C7;        /* Accessible blue links */
+    --success: #059669;     /* Accessible emerald green */
+    --danger: #DC2626;      /* Accessible crimson red */
+  }
+
+  html, body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100dvh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    line-height: 1.5;
+    font-size: 16px;
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+
+  /* Headings scale with clamp() */
+  h1 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(1.35rem, 3vw, 1.875rem);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  h4, h5, h6, .font-heading {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  /* Typography rule: Body 16px, line-height 1.5, strictly no text below 14px */
+  p, li, button, input, label {
+    line-height: 1.5;
+  }
+
+  .text-xs, .text-sm {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    font-feature-settings: "calt" 1, "zero" 1;
+    font-size: 14px;
+  }
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Minimum 44x44px touch targets */
+.min-touch {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Primary Button: Accent used only for primary button and active states */
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+  border-radius: 12px;
+  transition: all 200ms ease;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.2);
+}
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary outline button */
+.btn-secondary {
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 200ms ease;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: var(--surface-2);
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+/* Card base class: 12px border radius everywhere, 1px border */
+.card-base {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+[data-theme="dark"] .card-base {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+.card-base:hover {
+  border-color: var(--accent);
+}
+
+/* Code & Terminal Panels */
+.code-panel {
+  background-color: #070D1E;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: #F0F6FF;
+}
+[data-theme="light-blue"] .code-panel {
+  background-color: #0C1527;
+  border: 1px solid #BAE6FD;
+  color: #F8FAFC;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}

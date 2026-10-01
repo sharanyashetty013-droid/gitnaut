@@ -1,0 +1,6 @@
+{
+  "name": "Gitnaut: Master Git by Doing",
+  "description": "Interactive Git-learning platform with dark space WebGL graphics, missions, live 3D commit graph, and real-time star map streak tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
