@@ -1,4 +1,3 @@
-cat > README.md <<'EOF'
 # 🚀 Gitnaut
 
 **Learn Git by doing, not by memorizing.**
@@ -40,4 +39,4 @@ React · TypeScript · Vite · Tailwind CSS · three.js · Express · Google Gem
 Made by **Sharanya L Shetty** · [GitHub](https://github.com/sharanyashetty013-droid)
 
 ⭐ Star the repo if Gitnaut helped you!
-EOF
+
