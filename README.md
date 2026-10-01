@@ -1,19 +1,28 @@
 cat > README.md <<'EOF'
-# Gitnaut
+<div align="center">
 
-Learn Git by doing. An interactive space-themed Git masterclass with lessons, missions, visual simulators and a cheat sheet.
+# 🚀 Gitnaut
 
-## Features
-- 8 curriculum stages and 37 interactive Git commands
-- Mission-based practice
-- 3D commit graphs
-- Ask Gitnaut AI: a beginner-friendly Git tutor
+### Learn Git by doing. Not by memorizing.
 
-## Run locally
-1. `npm install`
-2. Copy `.env.example` to `.env` and set `GEMINI_API_KEY`
-3. `npm run dev`
+An interactive, space-themed Git masterclass where you fix real repo disasters, watch commits form in 3D, and ask an AI tutor when you're stuck.
 
-## Tech
-React, Vite, Tailwind CSS, three.js, Express, Gemini API
-EOF
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind-4-06B6D4?logo=tailwindcss&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-3D-000000?logo=threedotjs&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-AI_Tutor-8E75B2?logo=googlegemini&logoColor=white)
+
+**[🌌 Live demo](#)** · **[🐞 Report a bug](../../issues)**
+
+</div>
+
+---
+
+## ✨ Why Gitnaut?
+
+Most Git tutorials show you commands. Gitnaut makes you **use** them. Each lesson turns a Git concept into a small mission, so you learn what `git add`, `git stash` or `git merge` actually do by watching the result.
+
+## 🎯 Features
+
+| |
