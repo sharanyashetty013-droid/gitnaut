@@ -1,20 +1,19 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+cat > README.md <<'EOF'
+# Gitnaut
 
-# Run and deploy your AI Studio app
+Learn Git by doing. An interactive space-themed Git masterclass with lessons, missions, visual simulators and a cheat sheet.
 
-This contains everything you need to run your app locally.
+## Features
+- 8 curriculum stages and 37 interactive Git commands
+- Mission-based practice
+- 3D commit graphs
+- Ask Gitnaut AI: a beginner-friendly Git tutor
 
-View your app in AI Studio: https://ai.studio/apps/5346cfe0-8742-41eb-9a2a-5dbe34f04d74
+## Run locally
+1. `npm install`
+2. Copy `.env.example` to `.env` and set `GEMINI_API_KEY`
+3. `npm run dev`
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Tech
+React, Vite, Tailwind CSS, three.js, Express, Gemini API
+EOF
